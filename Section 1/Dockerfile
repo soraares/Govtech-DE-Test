@@ -22,5 +22,8 @@ RUN chown airflow .
 # switch back to airflow user
 USER airflow
 
+# ports
+EXPOSE 8080 5555 8793
+
 # start webserver and scheduler
 ENTRYPOINT [ "setup.sh" ]
